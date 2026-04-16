@@ -21,27 +21,41 @@ main{
     }
 }
 @media screen and (max-width:600px){
-    #navbar a{
-        margin: auto;
+    .navbar ul{
+        display: block;
+    }
+}
+@media screen and (max-width:600px){
+    nav .li,nav .anchor{
+        display: block;
+        margin: 0px;
+        padding: 15px;
+        text-align: left;
     }
 }
 @media screen and (max-width:600px){
     header .heading{
-        margin: 20vh;
-        margin-right: 20vh;
+        margin: 15vh;
+        margin-bottom: 0vh;
+        margin-right: 15vh;
         padding: 0vh;
+        font-size: 4em;
     }
 }
 @media screen and (max-width:600px){
-    header p{
-        display: flex;
-        text-align: center;
-        ;
+    header .heading:hover{
+        font-size: 4.5em;
+    }
+}
+@media screen and (max-width:600px){
+    header .info{
+        margin-top: 0vh;
+        margin: 15vh;
     }
 }
 header{
     background:url("Image/bgimg5.jpg");
-    background-position: left;
+    background-position: right;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -53,35 +67,33 @@ header{
     text-align: center;
     font-size: 1em;
     margin: 0px;
-    color:hsl(0, 100%, 100%);
-    /* text-shadow: 10px 10px 15px black; */
+    color:hsl(52, 25%, 82%);
+    text-shadow: 10px 10px 15px black;
     font-style: bold;
 }
-header h3{
+.info{
     color: hsl(0, 100%, 100%);
     font-style: bold;
-    /* text-shadow: 5px 5px 5px black; */
+    text-shadow: 5px 5px 10px black;
     transition: 0.5s;
     text-align: center;
     display:flex;
-    justify-content: center;
     margin-right: 50vh;
     margin-left: 50vh;
     margin-top: 10vh;
 }
 .heading{
-    color: hsl(0, 0%, 100%);
+    color: hsl(38, 76%, 62%);
     font-style: italic;
     text-shadow: 12px 12px 10px rgb(0, 0, 0);
     font-size: 5em;
     margin: auto;
     transition: 0.5s;
     text-align: center;
-    padding-top: 16vh;
+    padding-top: 20vh;
     padding-left: 60vh;
     padding-right: 60vh;
     padding-bottom: 0vh;
-
 }
 .heading:hover{
     /* text-shadow: 7px 15px 10px rgb(0, 0, 0); */
@@ -90,32 +102,33 @@ header h3{
     transition-property: all;
     font-size: 5.4em;
 }
-#navbar ul{
-    background-color: rgb(167, 160, 160);
-    font-size: 1.3em;
-    margin: 0px;
-    padding: 10px;
+.icon{
+    height: 100px;
+}
+.ul{
+    background-color: rgb(93, 89, 89);
+    font-size: 1.7em;
     transition-property: all;
     font-weight: bold;
     list-style-type: none;
     display: flex;
-    justify-content: center;
 }
-#navbar a{
+.anchor,li{
     text-decoration: none;
-    color: white;
+    color: hsl(52, 81%, 45%);
     font-family: var(--prim-font);
     transition-duration: 0.5s;
-    padding: 26px;
+    padding: 30px;
+    margin-left: 90px;
 }
-#navbar ul a:hover {
+.anchor:hover {
     font-size: 1.2em;
     transition-duration: 0.5s;
-    color: rgb(80, 214, 170);
-    background-color:hsl(0, 2%, 35%) ;
+    color: hsl(52, 81%, 45%);
+    background-color:hsl(0, 100%, 1%) ;
     padding: 10px;
 }
-#navbar ul a:active {
+.anchor:active {
     font-size: 0.9em;
     transition-duration: 0.5s;
     transition-delay: -1.5s;
