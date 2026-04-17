@@ -26,11 +26,23 @@ main{
     }
 }
 @media screen and (max-width:600px){
-    nav .li,nav .anchor{
-        display: block;
+    nav .icon{
+        padding: 0px ;
         margin: 0px;
+        float: left;
+    }
+}
+@media screen and (max-width:600px){
+    nav .anchor{
+        display: inline-block;
+        padding: 5px;
+        transition: 0.5s;
+    }
+}
+@media screen and (max-width:600px){
+    nav .anchor:hover{
         padding: 15px;
-        text-align: left;
+        transition: 0.4s;
     }
 }
 @media screen and (max-width:600px){
@@ -47,7 +59,7 @@ main{
         font-size: 4.5em;
     }
 }
-@media screen and (max-width:600px){
+@media screen and (max-width:1000px){
     header .info{
         margin-top: 0vh;
         margin: 15vh;
@@ -106,12 +118,15 @@ header{
     height: 100px;
 }
 .ul{
-    background-color: rgb(93, 89, 89);
+    background: url(Image/bgimg5.jpg);
+    background-repeat: no-repeat;
     font-size: 1.7em;
     transition-property: all;
     font-weight: bold;
     list-style-type: none;
     display: flex;
+    margin: 0px;
+    padding-left: 5px;
 }
 .anchor,li{
     text-decoration: none;
@@ -125,8 +140,8 @@ header{
     font-size: 1.2em;
     transition-duration: 0.5s;
     color: hsl(52, 81%, 45%);
-    background-color:hsl(0, 100%, 1%) ;
-    padding: 10px;
+    background-color:hsl(0, 0%, 0%) ;
+    padding: 33px;
 }
 .anchor:active {
     font-size: 0.9em;
