@@ -9,10 +9,12 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    width: auto;
 }
 main{
     margin-left: 15px;
     margin-right: 15px;
+    width: auto;
 }
 @media screen and (max-width:412px),(max-width:915px){
     main .about,main .mission,main .vision{
@@ -47,10 +49,10 @@ main{
 }
 @media screen and (max-width:412px),(max-width:915px){
     header .heading{
-        margin: 15vh;
-        margin-bottom: 0vh;
-        margin-right: 15vh;
-        padding: 0vh;
+        margin: 15px;
+        margin-bottom: 0px;
+        margin-right: 15px;
+        padding: 0px;
         font-size: 4em;
     }
 }
@@ -61,8 +63,8 @@ main{
 }
 @media screen and (max-width:412px),(max-width:915px){
     header .info{
-        margin-top: 0vh;
-        margin: 15vh;
+        margin-top: 0px;
+        margin: 15px;
     }
 }
 header{
