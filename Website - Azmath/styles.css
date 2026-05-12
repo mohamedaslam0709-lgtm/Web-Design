@@ -458,4 +458,38 @@ ul{
     .cta-content h2 {
         font-size: 1.8rem;
     }
+
+    .info-container {
+        flex-direction: column;
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    .info-sect-left,
+    .info-sect-right {
+        width: 100%;
+        height: auto;
+        margin-bottom: 2rem;
+    }
+
+    .info-sect-left-inner,
+    .info-sect-right-inner {
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    .info-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-group {
+        font-size: 1.2rem;
+        line-height: 2;
+    }
+
+    .footer-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
 }

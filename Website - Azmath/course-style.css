@@ -391,4 +391,15 @@ ul{
     .cta-content h2 {
         font-size: 1.8rem;
     }
+
+    .mcon-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .footer-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
 }
