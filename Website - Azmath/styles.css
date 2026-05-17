@@ -542,11 +542,12 @@ ul{
         font-size: 2.2rem;
     }
     .mcon-head h2::after{
-        display: none;
+        bottom: -80px;
     }
-    .mcon-card,
-    .mcon-head{
-        margin-top: 0rem;
+    .mcon-card{
+        margin: 0 auto;
+        padding: 4rem;
+        width: 90%;
     }
     .mcon-card::before{
         transform: scaleX(1);
@@ -595,7 +596,7 @@ ul{
 
 /* Responsive Design */
 
-@media screen and (max-width: 412px) {
+@media screen and (max-width: 415px) {
     .nav-container {
         padding: 1rem;
     }
@@ -613,8 +614,11 @@ ul{
         max-width: 300px;
         justify-content: center;
     }
+    .mcon-head h2::after{
+        display: none;
+    }
     .mcon-card {
-        padding: 1.5rem;
+        padding: 2rem;
     }
     .info-sect-left-inner,
     .info-sect-right-inner {
