@@ -15,6 +15,7 @@ body{
 }
 
 /* Color Variables */
+
 :root {
     --primary-color: hsl(142, 70%, 49%);
     --secondary-color: hsl(173, 77%, 31%);
@@ -333,49 +334,48 @@ ul{
 /* CTA-Content */
 
 .info-section{
+    display: grid;
+    place-items: center;
     background: url(Image/bgimg5.jpg);
     color: var(--light-color);
-    padding: 2rem 0;
-    height: 100vh;
+    height: 130vh;
 }
 .info-container{
     display: flex;
-    margin: 0 auto;
-    padding: 0 2rem;
-    max-width: 1200px;
-    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 .info-sect-left{
     flex: 1;
     margin: 2rem;
-    margin-right: 5rem;
+    padding: 2rem;
 }
 .info-sect-left-inner{
     background-color: color-mix(in srgb, var(--dark-color),transparent 45%);
-    padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 10px 20px hsla(0, 0%, 0%, 0.3);
     text-align: center;
     transition: transform 0.3s ease;
+    width: 80%;
 }
 .info-sect-left-inner:hover{
     transform: translateY(-10px);
 }
 .info-sect-left h2{
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+    padding: 1rem;
 }
 .info-sect-left p{
     font-size: 1.2rem;
-    margin: 1rem;
+    padding: 2rem;
 }
 .btn-whatsapp{
     background-color: hsla(0, 0%, 0%, 0.40);
     color: hsl(106, 90%, 35%);
     border-style: linear;
     padding: 1rem;
-    border-width: 1.2px;
-    border-radius: 8px;
+    font-size: 1.2rem;
+    border-radius: 20px;
     cursor: pointer;
     transition-duration: 0.5s;
 }
@@ -393,20 +393,21 @@ ul{
 }
 .info-sect-right-inner{
     background-color: color-mix(in srgb, var(--dark-color),transparent 15%);
-    padding: 1.4rem;
+    padding: 1rem;
     border-radius: 10px;
     box-shadow: 0 10px 20px hsla(0, 0%, 0%, 0.3);
     text-align: center;
     transition: transform 0.3s ease;
+    width: 80%;
 }
 .info-sect-right-inner:hover{
     transform: translateY(-10px);
 }
 .info-sect-right h2{
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 1.5rem;
 }
-.form-group {
+.form-group :not(.submit-btn) {
     margin-bottom: 1.5rem;
     text-align: left;
 }
@@ -441,6 +442,7 @@ ul{
     font-weight: bold;
     color: var(--dark-color);
     background: var(--gold-color);
+    text-align: center;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -454,6 +456,7 @@ ul{
 }
 
 /* Footer-Content */
+
 .footer-section{
     background-color: var(--dark-color);
 }
@@ -466,15 +469,14 @@ ul{
 .footer hr{
     background-color: var(--gold-color);
     height: 5px;
+    width: 100%;
 }
-.footer-item ,.footer-item a,.footer-item i{
+.footer-item ,
+.footer-item a,
+.footer-item i{
     color: var(--gold-color);
     font-size: 1rem;
     letter-spacing: 1px;
-}
-.footer-item i{
-    float: left;
-    padding: 1rem;
 }
 .footer-item{
     padding: 1rem;
@@ -488,6 +490,7 @@ ul{
     padding: 1rem;
     letter-spacing: 1px;
 }
+
 /* Responsive Design */
 
 @media screen and (max-width: 915px) {
@@ -525,14 +528,17 @@ ul{
     }
     .hd-title{
         margin-top: 3rem;
-        font-size: 2.2rem;
-        margin-bottom: 4rem;
+        margin-bottom: 2rem;
     }
     .hd-start,
     .hd-verse{
         font-size: 1rem;
     }
-    .hd-title,.mcon-head h2{
+    .mcon{
+        padding: 1rem;
+    }
+    .hd-title,
+    .mcon-head h2{
         font-size: 2.2rem;
     }
     .mcon-head h2::after{
@@ -540,34 +546,41 @@ ul{
     }
     .mcon-card,
     .mcon-head{
-        margin: 2rem;
         margin-top: 0rem;
     }
     .mcon-card::before{
         transform: scaleX(1);
     }
-    .mcon-grid {
+    .mcon-grid{
         grid-template-columns: 1fr;
     }
-    .section-header h2 {
+    .section-header h2{
         font-size: 2rem;
     }
-    .info-section{
-        height: 180vh;
+    .info-section {
+        height: auto;
+        padding: 2rem 0;
     }
     .info-container {
         flex-direction: column;
+        align-items: center;
     }
-    .info-sect-left, .info-sect-right {
+    .info-sect-left,
+    .info-sect-right {
         width: 100%;
-        margin: 2rem auto;
+        padding: 0;
+    }
+    .info-sect-left-inner,
+    .info-sect-right-inner {
+        width: 90%;
+        margin: 0 auto;
     }
     .info-sect-left-inner h2,
-    .info-sect-right-inner h2{
+    .info-sect-right-inner h2 {
         font-size: 2rem;
     }
     .info-sect-left-inner p,
-    .form-group label{
+    .form-group label {
         font-size: 1rem;
     }
     .footer-item p,
@@ -576,19 +589,18 @@ ul{
         font-size: 1rem;
     }
     .footer-section h1{
-        font-size: 1.5rem;
-    }
-    .footer hr{
-        width: auto;
+        font-size: 2rem;
     }
 }
+
+/* Responsive Design */
 
 @media screen and (max-width: 412px) {
     .nav-container {
         padding: 1rem;
     }
     .logo-text {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     .logo-icon {
         height: 40px;
@@ -604,17 +616,9 @@ ul{
     .mcon-card {
         padding: 1.5rem;
     }
-    .info-section{
-        height: 180vh;
-    }
-    .info-sect-left-inner h2 {
-        font-size: 1.5rem;
-    }
-    .info-container {
-        flex-direction: column;
-    }
-    .info-sect-left, .info-sect-right {
+    .info-sect-left-inner,
+    .info-sect-right-inner {
         width: 100%;
-        margin: 2rem;
+        padding: 1rem;
     }
 }
