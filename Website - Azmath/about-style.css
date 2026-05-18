@@ -15,6 +15,7 @@ body{
 }
 
 /* Color Variables */
+
 :root {
     --primary-color: #25D366;
     --secondary-color: #128c7e;
@@ -217,6 +218,9 @@ ul{
 .mcon{
     margin: 4rem;
 }
+.mcon-head{
+    align-content: center;
+}
 .mcon-head h2{
     font-size: 3rem;
     font-style: bold;
@@ -247,6 +251,12 @@ ul{
     float: left;
     padding: 2rem;
 }
+.mcon-head h2{
+    font-size: 3rem;
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+}
 .mcon-head #para1{
     color: hsl(0, 0%, 2%);
     font-size: 1.2rem;
@@ -273,10 +283,39 @@ ul{
     font-size: 1.4rem;
     letter-spacing: 1px;
 }
+
+/* Footer-Content */
+
 .footer-section{
     background-color: var(--dark-color);
+    clear: left;
+}
+.footer-section h1{
+    font-size: 2rem;
+    color: hsl(0, 0%, 100%);
+    letter-spacing: 1px;
+    padding: 1rem;
+}
+.footer hr{
+    background-color: var(--gold-color);
+    height: 5px;
+}
+.footer-item ,.footer-item a,.footer-item i{
     color: var(--gold-color);
-    clear: both;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+.footer-item{
+    padding: 1rem;
+}
+.footer-section h4{
+    font-size: 1.5rem;
+    color: hsl(0, 0%, 100%);
+    letter-spacing: 1px;
+}
+.footer-bottom{
+    padding: 1rem;
+    letter-spacing: 1px;
 }
 /* .mcon-head h2::after{
     content: '';
@@ -290,8 +329,8 @@ ul{
     border-radius: 2px;
 } */
 
-
 /* Responsive Design */
+
 @media screen and (max-width: 915px) {
     .nav-menu {
         position: fixed;
@@ -340,22 +379,6 @@ ul{
     .section-header h2 {
         font-size: 2rem;
     }
-
-    .mcon-img1,
-    .mcon-img2 {
-        float: none;
-        margin: 2rem auto;
-        display: block;
-        height:100px;
-    }
-
-    .mcon-head #para1,
-    .mcon-head #para2 {
-        float: none;
-        width: 100%;
-        margin: 1rem;
-        padding: 1rem;
-    }
 }
 
 @media screen and (max-width: 412px) {
@@ -387,38 +410,5 @@ ul{
 
     .cta-content h2 {
         font-size: 1.8rem;
-    }
-
-    .mcon {
-        margin: 1rem;
-    }
-
-    .mcon-head h2 {
-        font-size: 2rem;
-        margin: 1rem;
-    }
-
-    .mcon-img1,
-    .mcon-img2 {
-        float:none;
-        height: 250px;
-        width: 250px;
-        margin: 1rem auto;
-    }
-
-    .mcon-head #para1,
-    .mcon-head #para2 {
-        float:none;
-        font-size: 1rem;
-        width: 100%;
-        margin: 0.5rem;
-        padding: 1rem;
-    }
-
-    .footer-item {
-        clear:both;
-        flex-direction: column;
-        text-align: left;
-        gap: 0.5rem;
     }
 }
