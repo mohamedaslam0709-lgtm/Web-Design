@@ -15,6 +15,7 @@ body{
 }
 
 /* Color Variables */
+
 :root {
     --primary-color: #25D366;
     --secondary-color: #128c7e;
@@ -191,6 +192,7 @@ ul{
         transform: translateX(-50%) translateY(-5px);
     }
 }
+
 /*Main Content*/
 
 .mcon{
@@ -303,14 +305,42 @@ ul{
     line-height: 2.5;
     font-size: 1.6rem;
 }
+
+/* Footer-Content */
+
 .footer-section{
     background-color: var(--dark-color);
 }
-.footer-section h4{
+.footer-section h1{
+    font-size: 2rem;
+    color: hsl(0, 0%, 100%);
+    letter-spacing: 1px;
+    padding: 1rem;
+}
+.footer hr{
+    background-color: var(--gold-color);
+    height: 5px;
+}
+.footer-item ,.footer-item a,.footer-item i{
     color: var(--gold-color);
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+.footer-item{
+    padding: 1rem;
+}
+.footer-section h4{
+    font-size: 1.5rem;
+    color: hsl(0, 0%, 100%);
+    letter-spacing: 1px;
+}
+.footer-bottom{
+    padding: 1rem;
+    letter-spacing: 1px;
 }
 
 /* Responsive Design */
+
 @media screen and (max-width: 915px) {
     .nav-menu {
         position: fixed;
@@ -390,16 +420,5 @@ ul{
 
     .cta-content h2 {
         font-size: 1.8rem;
-    }
-
-    .mcon-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .footer-item {
-        flex-direction: column;
-        text-align: center;
-        gap: 0.5rem;
     }
 }
