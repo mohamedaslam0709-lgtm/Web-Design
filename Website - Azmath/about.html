@@ -1,414 +1,138 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    color: hsl(210, 10%, 84%);
-    overflow-x: hidden;
-    line-height: 1.5;
-    z-index: 0;
-    background: url(Image/bgimg3.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/* Color Variables */
-
-:root {
-    --primary-color: #25D366;
-    --secondary-color: #128c7e;
-    --accent-color: #075E54;
-    --dark-color: #1a1a2e;
-    --light-color: #f8f9fa;
-    --gold-color: #d4af37;
-    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --gradient-gold: linear-gradient(135deg, #d4af37 0%, #f4e5b6 100%);
-}
-
-/*Navigation*/
-
-.navbar{
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    background: hsl(240, 28%, 14%);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    box-shadow: 0 2px 20px var(--dark-color);
-}
-.nav-container{
-    max-width: 1200px;
-    margin: auto;
-    padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-}
-.logo-icon{
-    height: 50px;
-    width: auto;
-}
-.logo-text{
-    font-size: 1.7rem;
-    font-weight: bold;
-    color: var(--gold-color);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-a{
-    text-decoration: none;
-    color: var(--light-color);
-}
-ul{
-    list-style: none;
-}
-
-.nav-menu{
-    display: flex;
-    gap: 2rem;
-}
-.nav-menu li a{
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    padding: 0.7rem 2rem;
-    position: relative;
-}
-.nav-menu li a::after{
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%);
-    height: 2px;
-    width: 0;
-    background: var(--gold-color);
-    transition: width 0.3s ease;
-}
-.nav-menu li a:hover::after
-{
-    width: 80%;
-}
-.nav-menu li a:hover,
-.nav-menu li a.active
-{
-    color: var(--gold-color);
-}
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 4px;
-}
-
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background: var(--gold-color);
-    border-radius: 2px;
-    transition: all 0.3s ease;
-}
-
-/*Heading Section*/
-
-.hd{
-    position: relative;
-    color: var(--dark-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: url(Image/bgimg5.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 70vh;
-    margin-top: 80px;
-}
-.hd-back{
-    text-align: center;
-    position: absolute;
-    margin-top: 6em;
-}
-.hd-back a{
-    text-decoration: underline;
-    color: var(--gold-color);
-    font-size: 1.2rem;
-}
-.hd-content{
-    position: relative;
-    z-index: 2;
-    max-width: 900px;
-    animation: fadeInUp 1s ease;
-}
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
-.hd-title{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 3.6rem;
-    margin-bottom: 1rem;
-    color: var(--light-color);
-    text-shadow: -5px 6px 10px black;
-}
-.btn-primary{
-    background-color: var(--gold-color);
-    color: var(--dark-color);
-    font-size: 1.2rem;
-    padding: 1rem 1.5rem;
-    border-radius: 50px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    transition: all 0.4s ease;
-    box-shadow: 0 4px 15px var(--gradient-primary);
-}
-.btn-primary:hover{
-    transform: translateY(-2.5px);
-    box-shadow: 0 4px 15px hsl(51, 79%, 29%);
-}
-
-.scroll-down i{
-    color: var(--gold-color);
-    font-size: 2.2rem;
-}
-.scroll-down{
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-    animation: bounce 2s infinite;
-}
-@keyframes bounce {
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-        transform: translateX(-50%) translateY(0);
-    }
-
-    40% {
-        transform: translateX(-50%) translateY(-10px);
-    }
-
-    60% {
-        transform: translateX(-50%) translateY(-5px);
-    }
-}
-
-/*Main Content*/
-
-.mcon{
-    margin: 4rem;
-}
-.mcon-head{
-    align-content: center;
-}
-.mcon-head h2{
-    font-size: 3rem;
-    font-style: bold;
-    color: black;
-    margin: 2rem;
-    display: block;
-    justify-content: left;
-    letter-spacing: 2.5px;
-}
-.mcon-img1{
-    height: 350px;
-    width: 350px;
-    display: flex;
-    float: left;
-    margin: 3rem;
-    margin-right: 10rem;
-}
-.mcon-img2{
-    height: 350px;
-    width: 350px;
-    display: flex;
-    float: right;
-    margin: 3.5rem;
-}
-.mcon-img3{
-    height: 450px;
-    display: flex;
-    float: left;
-    padding: 2rem;
-}
-.mcon-head h2{
-    font-size: 3rem;
-    display: flex;
-    margin: 0 auto;
-    padding: 0;
-}
-.mcon-head #para1{
-    color: hsl(0, 0%, 2%);
-    font-size: 1.2rem;
-    width: 55%;
-    height: 50%;
-    display: flex;
-    padding: 2rem;
-    margin: 2rem;
-    letter-spacing: 1px;
-}
-.mcon-head #para2{
-    color: hsl(0, 0%, 2%);
-    font-size: 1.2rem;
-    width: 55%;
-    height: 50%;
-    display: flex;
-    padding: 2rem;
-    margin: 2rem;
-    margin-left: 10rem;
-    letter-spacing: 1px;
-}
-.mcon-head #para3{
-    color: hsl(0, 0%, 2%);
-    font-size: 1.4rem;
-    letter-spacing: 1px;
-}
-
-/* Footer-Content */
-
-.footer-section{
-    background-color: var(--dark-color);
-    clear: left;
-}
-.footer-section h1{
-    font-size: 2rem;
-    color: hsl(0, 0%, 100%);
-    letter-spacing: 1px;
-    padding: 1rem;
-}
-.footer hr{
-    background-color: var(--gold-color);
-    height: 5px;
-}
-.footer-item ,.footer-item a,.footer-item i{
-    color: var(--gold-color);
-    font-size: 1rem;
-    letter-spacing: 1px;
-}
-.footer-item{
-    padding: 1rem;
-}
-.footer-section h4{
-    font-size: 1.5rem;
-    color: hsl(0, 0%, 100%);
-    letter-spacing: 1px;
-}
-.footer-bottom{
-    padding: 1rem;
-    letter-spacing: 1px;
-}
-/* .mcon-head h2::after{
-    content: '';
-    position: absolute;
-    height: 4px;
-    bottom: -124px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    background: var(--gradient-gold);
-    border-radius: 2px;
-} */
-
-/* Responsive Design */
-
-@media screen and (max-width: 915px) {
-    .nav-menu {
-        position: fixed;
-        top: 80px;
-        left: -100%;
-        width: 100%;
-        background: rgba(26, 26, 46, 0.98);
-        flex-direction: column;
-        padding: 2rem;
-        gap: 1rem;
-        transition: left 0.3s ease;
-    }
-
-    .nav-menu.active {
-        left: 0;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-
-    .hamburger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
-    }
-
-    .btn-primary {
-        display: none;
-    }
-
-    .hd-title {
-        font-size: 2.5rem;
-    }
-
-    .features-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .section-header h2 {
-        font-size: 2rem;
-    }
-}
-
-@media screen and (max-width: 412px) {
-    .nav-container {
-        padding: 1rem;
-    }
-
-    .logo-text {
-        font-size: 1.2rem;
-    }
-
-    .logo-icon {
-        height: 40px;
-    }
-
-    .hd-title {
-        font-size: 2rem;
-    }
-
-    .btn-large {
-        width: 100%;
-        max-width: 300px;
-        justify-content: center;
-    }
-
-    .mcon-card {
-        padding: 1.5rem;
-    }
-
-    .cta-content h2 {
-        font-size: 1.8rem;
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="Image/Tazeen.png">
+    <title>About | Taz'een Quran Learning Academy</title>
+    <link rel="stylesheet" href="about-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="Image/Tazeen.png" alt="Taz'een Academy Logo" class="logo-icon">
+                <span class="logo-text">Taz'een Academy</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <!-- <li><a href="donate.html">Donate</a></li> -->
+                <li><a href="about.html" class="active">About</a></li>
+                </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <div class="hd">
+        <div class="hd-content">
+            <h1 class="hd-title">About Us</h1>
+        </div>
+        <div class="hd-back">
+            <a href="index.html">Go back</a>
+        </div>
+        <div class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </div>
+    <!--Main Content-->
+    <main class="mcon">
+        <div class="mcon-head">
+            <h2>About Taz'een Academy</h2>
+                <div class="mcon-para">
+                    <div class="mcon-img1">
+                        <img src="Image/read.png">
+                    </div>
+                    <p id="para1">
+                    Welcome to Taz'een Academy, a dedicated Quran learning academy committed to nurturing a deeper understanding and connection with the Holy Quran. Our mission is to provide accessible, authentic, and high-quality Islamic education to students of all ages and backgrounds, fostering spiritual growth and lifelong learning.
+                    At Taz'een Academy, we combine traditional teachings with modern technology to create an engaging and flexible learning environment. Our experienced and qualified instructors are passionate about helping students master Tajweed, memorization (Hifz), recitation, and the interpretation (Tafsir) of the Quran. Whether you're a beginner taking your first steps or an advanced learner seeking refinement, our tailored programs cater to every level of expertise.
+                    We believe that learning the Quran is not just about recitation but also about embodying its teachings in daily life. Through structured lessons, personalized guidance, and interactive sessions, we aim to empower our students with the knowledge and skills to strengthen their faith and character.
+                    Join us on this transformative journey as we strive to build a global community of learners united by their love for the Quran. Together, let's illuminate hearts and minds with the timeless wisdom of The Almighty's words.
+                    </p>
+                <div class="mcon-img2">
+                    <img src="Image/quran.jpg">
+                </div>
+                <p id="para2">As mentioned before, Taz'een Academy is an independent organization which aims to help everyone who has a desire to learn Quran. In addition to this, our objectives also include building moral ethics of our students and teaching them about the Islamic way of life. With innovative one on one sessions from our expert Quran teachers, you will be learning how you can become a better Muslim and make your life exactly according to the commandments of Islam. With fluency in the English language, our teachers make the best use of one on one online sessions and teach you at a pace that matches exactly your learning ability. In the end, Taz'een Academy aims to make everyone understand the teachings of the holy Quran through online Quranic sessions, with the comfort of their home, at a time that suits them best.
+                E learning is now need of the time and being accepted worldwide. Success of online training depends on the proficiency of the teacher to keep his/her student engaged and focused. We hire trained and qualified staff who are expert in their domain and have online teaching experience.
+                </p>
+                <h2>
+                    Our Leader's Vision
+                </h2>
+                <div class="mcon-img3">
+                    <img src="Image/Moulavi Azmathullah Salami , B.Com, MSW(Psychiatrist).jpeg">
+                </div>
+                <p id="para3">
+                "Teaching the Qur’an is not just about reading words — it is about building character, faith, and connection with Allah.
+                "Our vision is to make Qur’an learning easy, authentic, and meaningful for students of all ages. We believe that the Qur’an is not only meant to be recited, but also understood, practiced, and lived in our daily lives.
+                Through this academy, we aim to nurture love for the Qur’an with proper guidance, discipline, and Islamic values in a peaceful learning environment.
+                May Allah accept our efforts and make this journey beneficial for everyone.Jazakumullahu Khairan."
+                </p>
+            </div>
+        </div>
+    </main>
+<!--Footer-->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h1>Contact Us</h1>
+                <hr>
+            </div>
+            <div class="footer-section">
+                <div class="footer-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+91 7397577271</p>
+                    </div>
+                </div>
+                <div class="footer-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <a href="mailto:tazeenlearningacademy@gmail.com">tazeenlearningacademy@gmail.com</a>
+                    </div>
+                </div>
+                <div class="footer-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <h4>WhatsApp</h4>
+                        <a href="https://chat.whatsapp.com/HUBTLFQeHXgHSsPPUYZzx8" target="_blank">Join our group</a>
+                    </div>
+                </div>
+                <div class="footer-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Location</h4>
+                        <p>Tamil Nadu, India</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="footer-bottom">
+                    Copyright &copy; 2026 Taz'een Academy. All Rights Reserved <br> Freeze's Project
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+    // Mobile menu toggle
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+    
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+    // Close menu when clicking a link
+            document.querySelectorAll('.nav-menu li a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    hamburger.classList.remove('active');
+                });
+            });
+    </script>
+</body>
+</html>
