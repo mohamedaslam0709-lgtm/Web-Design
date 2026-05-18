@@ -241,6 +241,12 @@ ul{
     float: right;
     margin: 3.5rem;
 }
+.mcon-img3{
+    height: 450px;
+    display: flex;
+    float: left;
+    padding: 2rem;
+}
 .mcon-head #para1{
     color: hsl(0, 0%, 2%);
     font-size: 1.2rem;
@@ -260,6 +266,11 @@ ul{
     padding: 2rem;
     margin: 2rem;
     margin-left: 10rem;
+    letter-spacing: 1px;
+}
+.mcon-head #para3{
+    color: hsl(0, 0%, 2%);
+    font-size: 1.4rem;
     letter-spacing: 1px;
 }
 .footer-section{
