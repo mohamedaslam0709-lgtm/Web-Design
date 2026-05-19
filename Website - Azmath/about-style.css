@@ -349,17 +349,8 @@ ul{
     .hamburger.active span:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
     }
-    .btn-primary {
-        display: none;
-    }
     .hd-title {
         font-size: 2.5rem;
-    }
-    .features-grid {
-        grid-template-columns: 1fr;
-    }
-    .section-header h2 {
-        font-size: 2rem;
     }
     .mcon-item{
         flex-direction: column;
@@ -387,18 +378,15 @@ ul{
     }
     .mcon h2{
         font-size: 2rem;
-        margin: 0;
+        padding: 1rem 0;
     }
     .mcon h4{
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         padding: 1rem 0;
     }
 }
 
 @media screen and (max-width: 412px) {
-    .nav-container {
-        padding: 1rem;
-    }
     .logo-text {
         font-size: 1.2rem;
     }
@@ -408,33 +396,29 @@ ul{
     .hd-title {
         font-size: 2rem;
     }
-    .btn-large {
-        width: 100%;
-        max-width: 300px;
-        justify-content: center;
-    }
-    .mcon-card {
-        padding: 1.5rem;
-    }
-    .cta-content h2 {
-        font-size: 1.8rem;
-    }
     .mcon-item{
         flex-direction: column;
+        margin: 0 1.5rem;
     }
     .mcon-img{
-    width: 100%;
-    height: auto;
-    order: 1;
+        width: 100%;
+        height: auto;
+        object-fit: fill;
+        order: 1;
     }
     .mcon-para{
-    width: 100%;
-    text-align: center;
-    order: 2;
-    padding: 1rem 0;
+        width: 100%;
+        text-align: center;
+        order: 2;
+        padding: 1rem 0;
+    }
+    .mcon-para p{
+        font-size: 1rem;
+        text-align: left;
     }
     .mcon-item,
     .mcon-head{
-    text-align: center;
+        text-align: center;
     }
+    
 }
