@@ -291,7 +291,9 @@ ul{
     background-color: var(--gold-color);
     height: 5px;
 }
-.footer-item ,.footer-item a,.footer-item i{
+.footer-item,
+.footer-item a,
+.footer-item i{
     color: var(--gold-color);
     font-size: 1rem;
     letter-spacing: 1px;
