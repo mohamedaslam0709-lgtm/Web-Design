@@ -380,4 +380,20 @@ ul{
         font-size: 1.4rem;
         padding: 1rem 0;
     }
+    .footer-item p{
+        font-size: 0.8rem;
+    }
+    .footer-item,
+    .footer-section h1{
+        padding: 0.5rem;
+    }
+    .footer-item h4{
+        font-size: 1rem;
+    }
+    .footer-section h1{
+        font-size: 1.2rem;
+    }
+    .footer-bottom{
+        padding: 0.5rem;
+    }
 }
