@@ -311,7 +311,7 @@ ul{
 
 /* Responsive Design */
 
-@media screen and (max-height: 915px){
+@media screen and (max-width: 915px){
     .nav-container{
         padding: 1rem;
     }
