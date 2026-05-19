@@ -378,6 +378,7 @@ ul{
     .mcon-item,
     .mcon-head{
     text-align: center;
+    font-size: 1rem;
     }
 }
 
@@ -405,22 +406,4 @@ ul{
     .cta-content h2 {
         font-size: 1.8rem;
     }
-    /* .mcon-item{
-        flex-direction: column;
-    }
-    .mcon-img{
-    width: 100%;
-    height: auto;
-    order: 1;
-    }
-    .mcon-para{
-    width: 100%;
-    text-align: center;
-    order: 2;
-    padding: 1rem 0;
-    }
-    .mcon-item,
-    .mcon-head{
-    text-align: center;
-    } */
 }
