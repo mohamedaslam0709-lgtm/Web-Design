@@ -405,7 +405,7 @@ ul{
     .cta-content h2 {
         font-size: 1.8rem;
     }
-    .mcon-item{
+    /* .mcon-item{
         flex-direction: column;
     }
     .mcon-img{
@@ -422,5 +422,5 @@ ul{
     .mcon-item,
     .mcon-head{
     text-align: center;
-    }
+    } */
 }
