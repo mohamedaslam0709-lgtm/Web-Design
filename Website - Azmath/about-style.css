@@ -8,7 +8,7 @@ body{
     overflow-x: hidden;
     line-height: 1.5;
     z-index: 0;
-    background: url(Image/bgimg3.jpg);
+    background: url(Image/bgimg4.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -216,10 +216,18 @@ ul{
 /*Main Content*/
 
 .mcon{
-    margin: 4rem;
+    margin: 2rem auto;
+    max-width: 1550px;
+  }
+.mcon-item{
+    display: flex;
+    margin-bottom: 4rem;
+    align-items: center;
 }
-.mcon-head{
-    align-content: center;
+.mcon-head h4{
+    font-size: 1.5rem;
+    font-style: bold;
+    color: black;
 }
 .mcon-head h2{
     font-size: 3rem;
@@ -230,58 +238,41 @@ ul{
     justify-content: left;
     letter-spacing: 2.5px;
 }
-.mcon-img1{
-    height: 350px;
-    width: 350px;
-    display: flex;
-    float: left;
-    margin: 3rem;
-    margin-right: 10rem;
+.mcon-img{
+    height: 400px;
+    width: 40%;
+    object-fit: contain;
+    border-radius: 10px;
 }
-.mcon-img2{
-    height: 350px;
-    width: 350px;
-    display: flex;
-    float: right;
-    margin: 3.5rem;
+.mcon-img-left{
+    order: 1;
 }
-.mcon-img3{
-    height: 450px;
-    display: flex;
-    float: left;
-    padding: 2rem;
+.mcon-img-right{
+    order: 2;
 }
-.mcon-head h2{
-    font-size: 3rem;
-    display: flex;
-    margin: 0 auto;
-    padding: 0;
+.mcon-para{
+    width: 50%;
+    padding: 0 2rem;
 }
-.mcon-head #para1{
-    color: hsl(0, 0%, 2%);
+.mcon-para-left{
+    text-align: left;
+    order: 1;
+}
+.mcon-para-right{
+    text-align: left;
+    order: 2;
+}
+.mcon-para p{
     font-size: 1.2rem;
-    width: 55%;
-    height: 50%;
-    display: flex;
-    padding: 2rem;
-    margin: 2rem;
-    letter-spacing: 1px;
+    line-height: 1.8;
+    color: var(--dark-color);
 }
-.mcon-head #para2{
-    color: hsl(0, 0%, 2%);
-    font-size: 1.2rem;
-    width: 55%;
-    height: 50%;
-    display: flex;
-    padding: 2rem;
-    margin: 2rem;
-    margin-left: 10rem;
-    letter-spacing: 1px;
-}
-.mcon-head #para3{
-    color: hsl(0, 0%, 2%);
+.mcon-msg{
+    font-style: italic;
     font-size: 1.4rem;
-    letter-spacing: 1px;
+    line-height: 3rem;
+    color: var(--dark-color);
+    order: 3;
 }
 
 /* Footer-Content */
@@ -343,41 +334,50 @@ ul{
         gap: 1rem;
         transition: left 0.3s ease;
     }
-
     .nav-menu.active {
         left: 0;
     }
-
     .hamburger {
         display: flex;
     }
-
     .hamburger.active span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
-
     .hamburger.active span:nth-child(2) {
         opacity: 0;
     }
-
     .hamburger.active span:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
     }
-
     .btn-primary {
         display: none;
     }
-
     .hd-title {
         font-size: 2.5rem;
     }
-
     .features-grid {
         grid-template-columns: 1fr;
     }
-
     .section-header h2 {
         font-size: 2rem;
+    }
+    .mcon-item{
+        flex-direction: column;
+    }
+    .mcon-img{
+    width: 100%;
+    height: auto;
+    order: 1;
+    }
+    .mcon-para{
+    width: 100%;
+    text-align: center;
+    order: 2;
+    padding: 1rem 0;
+    }
+    .mcon-item,
+    .mcon-head{
+    text-align: center;
     }
 }
 
@@ -385,30 +385,42 @@ ul{
     .nav-container {
         padding: 1rem;
     }
-
     .logo-text {
         font-size: 1.2rem;
     }
-
     .logo-icon {
         height: 40px;
     }
-
     .hd-title {
         font-size: 2rem;
     }
-
     .btn-large {
         width: 100%;
         max-width: 300px;
         justify-content: center;
     }
-
     .mcon-card {
         padding: 1.5rem;
     }
-
     .cta-content h2 {
         font-size: 1.8rem;
+    }
+    .mcon-item{
+        flex-direction: column;
+    }
+    .mcon-img{
+    width: 100%;
+    height: auto;
+    order: 1;
+    }
+    .mcon-para{
+    width: 100%;
+    text-align: center;
+    order: 2;
+    padding: 1rem 0;
+    }
+    .mcon-item,
+    .mcon-head{
+    text-align: center;
     }
 }
