@@ -291,7 +291,9 @@ ul{
     background-color: var(--gold-color);
     height: 5px;
 }
-.footer-item ,.footer-item a,.footer-item i{
+.footer-item,
+.footer-item a,
+.footer-item i{
     color: var(--gold-color);
     font-size: 1rem;
     letter-spacing: 1px;
@@ -308,27 +310,19 @@ ul{
     padding: 1rem;
     letter-spacing: 1px;
 }
-/* .mcon-head h2::after{
-    content: '';
-    position: absolute;
-    height: 4px;
-    bottom: -124px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    background: var(--gradient-gold);
-    border-radius: 2px;
-} */
 
 /* Responsive Design */
 
-@media screen and (max-width: 915px) {
+@media screen and (max-width: 915px){
+    .nav-container{
+        padding: 1rem;
+    }
     .nav-menu {
         position: fixed;
         top: 80px;
         left: -100%;
         width: 100%;
-        background: rgba(26, 26, 46, 0.98);
+        background: var(--dark-color);
         flex-direction: column;
         padding: 2rem;
         gap: 1rem;
@@ -336,6 +330,9 @@ ul{
     }
     .nav-menu.active {
         left: 0;
+    }
+    .logo-text{
+        font-size: 1.4rem;
     }
     .hamburger {
         display: flex;
@@ -349,93 +346,56 @@ ul{
     .hamburger.active span:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
     }
-    .btn-primary {
-        display: none;
-    }
     .hd-title {
-        font-size: 2.5rem;
-    }
-    .features-grid {
-        grid-template-columns: 1fr;
-    }
-    .section-header h2 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     .mcon-item{
         flex-direction: column;
-        margin: 0 1.5rem;
-        
+        margin: 0 1rem;
+        margin-bottom: 3rem;
     }
     .mcon-img{
-    width: 100%;
-    height: auto;
-    object-fit: fill;
-    order: 1;
+        width: 100%;
+        height: auto;
+        object-fit: fill;
+        order: 1;
     }
     .mcon-para{
-    width: 100%;
-    text-align: center;
-    order: 2;
-    padding: 1rem 0;
-    }
-    .mcon-para p{
-    font-size: 1rem;
-    text-align: left;
-    }
-    .mcon-item,
-    .mcon-head{
-    text-align: center;
-    }
-    .mcon h2{
-        font-size: 2rem;
-        margin: 0;
-    }
-    .mcon h4{
-        font-size: 1.3rem;
+        width: 100%;
+        text-align: center;
+        order: 2;
         padding: 1rem 0;
     }
-}
-
-@media screen and (max-width: 412px) {
-    .nav-container {
-        padding: 1rem;
-    }
-    .logo-text {
-        font-size: 1.2rem;
-    }
-    .logo-icon {
-        height: 40px;
-    }
-    .hd-title {
-        font-size: 2rem;
-    }
-    .btn-large {
-        width: 100%;
-        max-width: 300px;
-        justify-content: center;
-    }
-    .mcon-card {
-        padding: 1.5rem;
-    }
-    .cta-content h2 {
-        font-size: 1.8rem;
-    }
-    .mcon-item{
-        flex-direction: column;
-    }
-    .mcon-img{
-    width: 100%;
-    height: auto;
-    order: 1;
-    }
-    .mcon-para{
-    width: 100%;
-    text-align: center;
-    order: 2;
-    padding: 1rem 0;
+    .mcon-para p{
+        font-size: 1rem;
+        text-align: left;
     }
     .mcon-item,
     .mcon-head{
-    text-align: center;
+        text-align: center;
+    }
+    .mcon-head h2{
+        font-size: 2rem;
+        margin: 0 auto;
+    }
+    .mcon-head h4{
+        font-size: 1.4rem;
+        padding: 1rem 0;
+    }
+    .footer-item p{
+        font-size: 0.8rem;
+    }
+    .footer-item,
+    .footer-section h1{
+        padding: 0.5rem;
+    }
+    .footer-item h4{
+        font-size: 1rem;
+    }
+    .footer-section h1{
+        font-size: 1.2rem;
+    }
+    .footer-bottom{
+        padding: 0.5rem;
     }
 }
