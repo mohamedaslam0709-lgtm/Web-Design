@@ -308,21 +308,10 @@ ul{
     padding: 1rem;
     letter-spacing: 1px;
 }
-/* .mcon-head h2::after{
-    content: '';
-    position: absolute;
-    height: 4px;
-    bottom: -124px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    background: var(--gradient-gold);
-    border-radius: 2px;
-} */
 
 /* Responsive Design */
 
-@media screen and (max-width: 915px) {
+@media screen and (max-width: 915px){
     .nav-menu {
         position: fixed;
         top: 80px;
@@ -386,7 +375,7 @@ ul{
     }
 }
 
-@media screen and (max-width: 412px) {
+@media screen and (max-width: 312px){
     .logo-text {
         font-size: 1.2rem;
     }
